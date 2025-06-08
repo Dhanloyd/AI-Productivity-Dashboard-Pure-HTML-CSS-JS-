@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AI Productivity Dashboard</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>AI Productivity Dashboard</header>
+<main>
+  <section class="stats" aria-label="Productivity summary statistics">
+    <div class="stat-card" tabindex="0" aria-describedby="tasks-completed-label">
+      <div class="stat-value" id="tasksCompletedCount">0</div>
+      <div class="stat-label" id="tasks-completed-label">Tasks Completed</div>
+    </div>
+    <div class="stat-card" tabindex="0" aria-describedby="ai-suggestions-label">
+      <div class="stat-value" id="aiSuggestionsCount">0</div>
+      <div class="stat-label" id="ai-suggestions-label">AI Suggestions</div>
+    </div>
+    <div class="stat-card" tabindex="0" aria-describedby="time-saved-label">
+      <div class="stat-value" id="timeSavedCount">0</div>
+      <div class="stat-label" id="time-saved-label">Minutes Saved</div>
+    </div>
+  </section>
+
+  <section id="chart-container" aria-label="Productivity chart showing tasks completed over last 7 days">
+    <canvas id="productivityChart" width="800" height="280" aria-hidden="true"></canvas>
+  </section>
+
+  <section class="tasks-section" aria-label="Task management with AI suggestions">
+    <div class="tasks-header">
+      <h2>Tasks</h2>
+      <button class="btn-add-task" id="btnAddTask" aria-expanded="false" aria-controls="addTaskForm">Add Task</button>
+    </div>
+
+    <ul class="task-list" id="taskList" aria-live="polite" aria-relevant="additions removals"></ul>
+
+    <form class="add-task-form" id="addTaskForm" aria-hidden="true">
+      <input type="text" class="add-task-input" id="newTaskInput" placeholder="Enter new task..." aria-label="New task description" required />
+      <div class="add-task-btns">
+        <button type="submit" class="btn-submit">Add</button>
+        <button type="button" class="btn-cancel" id="btnCancelAdd">Cancel</button>
+      </div>
+    </form>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
+
